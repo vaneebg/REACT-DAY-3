@@ -1,6 +1,7 @@
 import './UserForm'
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import './UserForm.css'
 
 
 
@@ -58,6 +59,7 @@ const UserForm = () => {
   };
   return (
     <form onSubmit={handleSubmit}>
+      <div className="inputs">
       <input
         type="text"
         placeholder="name"
@@ -83,6 +85,7 @@ const UserForm = () => {
         Enviar
       </button>
       {message}
+      </div>
     </form>
   );
 };

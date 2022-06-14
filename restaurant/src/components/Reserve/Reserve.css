@@ -1,0 +1,24 @@
+h3 {
+    color: brown;
+    font-weight: bolder;
+    font-size: 2em;
+    -webkit-text-stroke: 0.4px white;
+}
+
+input {
+    width: 17em;
+}
+
+.inputs {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+button {
+    font-size: 1.3em;
+}
+
+form {
+    padding-bottom: 16em;
+}

@@ -8,9 +8,10 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: coral;
+    background-image: linear-gradient(rgb(233, 156, 68), rgb(196, 96, 14), rgb(233, 156, 68));
     border: 2px dashed brown;
     width: 50%;
+    padding-bottom: 3em;
 }
 
 span {

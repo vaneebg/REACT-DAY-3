@@ -13,6 +13,8 @@ h1 {
 .nav {
     display: flex;
     flex-direction: row;
+    position: sticky;
+    top: 1px;
     justify-content: space-around;
     background-color: brown;
     padding-bottom: 1em;

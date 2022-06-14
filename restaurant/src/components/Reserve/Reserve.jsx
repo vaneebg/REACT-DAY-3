@@ -1,4 +1,5 @@
 import './Reserve'
+import './Reserve.css'
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
@@ -32,8 +33,8 @@ const initialState = {
   };
 
   const handleInputChange = (e) => {
-    if ( data.name.length <3 ) {
-        // && data.day_reserve.length <1 && data.number.length<0
+    if ( data.name===" " && data.day_reserve===" " && data.number=== " ") {
+      // NO VAAA
       setMessage("Debes rellenar los tres campos");
       setBtnDisabled(true);
 
@@ -59,30 +60,33 @@ const initialState = {
   };
   return (
     <form onSubmit={handleSubmit}>
+       <div className="inputs">
+      <h3>Rellena aquí tu reserva</h3>
       <input
         type="text"
         placeholder="nombre"
         onChange={handleInputChange}
         value={data.name}
         name="name"
-      />
+      /><br/>
       <input
         type="date"
         onChange={handleInputChange}
         value={data.day_reserve}
         name="day_reserve"
-      />
+      /><br/>
        <input
         type="number"
         placeholder="cuántos sois en la reserva"
         onChange={handleInputChange}
         value={data.number}
         name="number"
-      />
+      /><br/>
       <button type="submit" disabled={btnDisabled}>
         Enviar
       </button>
       {message}
+      </div>
     </form>
   );
 };

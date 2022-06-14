@@ -27,7 +27,7 @@ const dishes = [{
     {
         id: 5,
         name: 'plato 5',
-        description: '.....',
+        description: 'plato n 44509',
         price: 12
     }
 ]

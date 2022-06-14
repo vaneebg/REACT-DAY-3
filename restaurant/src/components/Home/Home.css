@@ -5,6 +5,7 @@ img {
 .home {
     display: flex;
     align-items: baseline;
+    padding-bottom: 8em;
 }
 
 .el,
