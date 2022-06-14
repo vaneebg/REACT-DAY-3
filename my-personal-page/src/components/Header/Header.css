@@ -3,3 +3,17 @@ h1 {
     text-align: center;
     font-size: 3em;
 }
+
+.nav a {
+    all: unset;
+    font-size: 1.5em;
+    cursor: pointer;
+}
+
+.nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background-color: brown;
+    padding-bottom: 1em;
+}

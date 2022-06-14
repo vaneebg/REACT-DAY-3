@@ -8,6 +8,7 @@ const contact=['About me','More info']
 
 function SuperSaiyan() {
   return (
+    
     <div className="main">
     <Navbar title='Tecnologías' array={learned}/>
   

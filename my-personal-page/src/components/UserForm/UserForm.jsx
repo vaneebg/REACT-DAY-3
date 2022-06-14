@@ -17,7 +17,7 @@ import { useNavigate } from "react-router-dom";
 
 const UserForm = () => {
   let contactInfo = JSON.parse(localStorage.getItem("USERS")) || [];
-  function saveData() {
+ const saveData=() =>{
       contactInfo.push(data);
       localStorage.setItem("USERS", JSON.stringify(contactInfo));
     }
@@ -61,7 +61,6 @@ const UserForm = () => {
     e.preventDefault();
     console.log("se lanza el formulario", data);
     saveData()
-
     clearState();
     setMessage("formulario enviado con éxito");
     setTimeout(() => {

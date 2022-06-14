@@ -9,10 +9,10 @@ import UserForm from './components/UserForm/UserForm'
 function App() {
   return (
     <div className="App">
-    <Header title='Página web Personal' info='Created at ...'/>
+   
     
    <BrowserRouter>
-    
+   <Header title='Página web Personal' info='Created at ...'/>
         <Routes>
           <Route path='/' element={<SuperSaiyan/>}/>
           <Route path="/contact" element={<UserForm />} />
