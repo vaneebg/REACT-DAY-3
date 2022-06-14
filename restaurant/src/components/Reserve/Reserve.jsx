@@ -60,8 +60,10 @@ const initialState = {
   };
   return (
     <form onSubmit={handleSubmit}>
-       <div className="inputs">
-      <h3>Rellena aquí tu reserva</h3>
+        <fieldset>
+          <legend><h3>Rellena aquí tu reserva</h3></legend>
+          <div className="inputs">
+
       <input
         type="text"
         placeholder="nombre"
@@ -77,7 +79,7 @@ const initialState = {
       /><br/>
        <input
         type="number"
-        placeholder="cuántos sois en la reserva"
+        placeholder="número de personas"
         onChange={handleInputChange}
         value={data.number}
         name="number"
@@ -85,8 +87,10 @@ const initialState = {
       <button type="submit" disabled={btnDisabled}>
         Enviar
       </button>
-      {message}
       </div>
+      </fieldset>
+      {message}
+      
     </form>
   );
 };
