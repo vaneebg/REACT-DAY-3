@@ -1,19 +1,24 @@
 h1 {
-    color: chocolate;
-    text-shadow: 3px 4px brown;
+    color: brown;
+    text-shadow: 3px 4px coral;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 2.8em;
 }
 
 .nav a {
     all: unset;
     font-size: 1.5em;
     cursor: pointer;
+    color: brown;
+    font-weight: bolder;
+    font-size: 1.7em;
 }
 
 .nav {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    background-color: grey;
+    width: 100%;
+    background-color: rgba(201, 91, 17, 0.589);
     padding-bottom: 1em;
 }

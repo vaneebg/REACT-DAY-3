@@ -1,18 +1,27 @@
-.dishes {
+img {
+    width: 20em;
+}
+
+.home {
+    display: flex;
+    align-items: baseline;
+}
+
+.el,
+.elInstal {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
+    background-color: white;
+    padding: 4em;
+    margin: 2em;
+    width: 13em;
+    height: 2em;
+    border-radius: 30px;
 }
 
-.printDishes {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: coral;
-    border: 2px dashed brown;
-    width: 50%;
-}
-
-span {
-    text-decoration: overline;
+.elInstal {
+    width: 19em;
+    height: 12em;
 }
