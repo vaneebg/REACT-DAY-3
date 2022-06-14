@@ -3,3 +3,17 @@ h1 {
     text-shadow: 3px 4px brown;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
+
+.nav a {
+    all: unset;
+    font-size: 1.5em;
+    cursor: pointer;
+}
+
+.nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background-color: grey;
+    padding-bottom: 1em;
+}

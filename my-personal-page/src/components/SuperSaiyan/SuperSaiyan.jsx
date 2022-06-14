@@ -4,7 +4,7 @@ import Contact from "../Contact/Contact"
 import image from '../Main/assets/titan.jpg';
 import './SuperSaiyan.css'
 const learned=['Javascript','NodeJS','React','Express','MySQL','MongoDB']
-const contact=['About me','More info']
+const contact=['','More info']
 
 function SuperSaiyan() {
   return (

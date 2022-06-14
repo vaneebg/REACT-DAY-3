@@ -1,25 +1,25 @@
-import './UserForm'
+import './Reserve'
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 
 
-const UserForm = () => {
-  let contactInfo = JSON.parse(localStorage.getItem("USERS")) || [];
+const Reserve = () => {
+  let contactReserve = JSON.parse(localStorage.getItem("RESERVES")) || [];
  const saveData=() =>{
-      contactInfo.push(data);
-      localStorage.setItem("USERS", JSON.stringify(contactInfo));
+      contactReserve.push(data);
+      localStorage.setItem("RESERVES", JSON.stringify(contactReserve));
     }
 
-    const initialState = {
-        username: "",
-        email: "",
-        text:"",
+const initialState = {
+        name: "",
+        day_reserve: "",
+        number:"",
       };
   const [data, setData] = useState({
-    username: "",
-    email: "",
-    text:""
+    name: "",
+    day_reserve: "",
+    number:""
   });
   const [btnDisabled, setBtnDisabled] = useState(true);
   const [message, setMessage] = useState("");
@@ -32,8 +32,9 @@ const UserForm = () => {
   };
 
   const handleInputChange = (e) => {
-    if ( data.username.length < 3 ) {
-      setMessage("Name must be at least 3 characters");
+    if ( data.name.length <3 ) {
+        // && data.day_reserve.length <1 && data.number.length<0
+      setMessage("Debes rellenar los tres campos");
       setBtnDisabled(true);
 
     } else {
@@ -60,24 +61,23 @@ const UserForm = () => {
     <form onSubmit={handleSubmit}>
       <input
         type="text"
-        placeholder="name"
+        placeholder="nombre"
         onChange={handleInputChange}
-        value={data.username}
-        name="username"
+        value={data.name}
+        name="name"
       />
       <input
-        type="email"
-        placeholder="email"
+        type="date"
         onChange={handleInputChange}
-        value={data.email}
-        name="email"
+        value={data.day_reserve}
+        name="day_reserve"
       />
        <input
-        type="textarea"
-        placeholder="pon aquí tu texto"
+        type="number"
+        placeholder="cuántos sois en la reserva"
         onChange={handleInputChange}
-        value={data.text}
-        name="text"
+        value={data.number}
+        name="number"
       />
       <button type="submit" disabled={btnDisabled}>
         Enviar
@@ -88,4 +88,4 @@ const UserForm = () => {
 };
 
 
-export default UserForm
+export default Reserve
