@@ -2,7 +2,26 @@ import './UserForm'
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
+
+// let contactInfo = JSON.parse(localStorage.getItem("USERS")) || [];
+// function saveData() {
+//   const data = {
+//       username: username.value,
+//       email: email.value,
+//       text:text.value
+//   };
+//   contactInfo.push(data);
+//   localStorage.setItem("USERS", JSON.stringify(contactInfo));
+// }
+// saveData()
+
 const UserForm = () => {
+  let contactInfo = JSON.parse(localStorage.getItem("USERS")) || [];
+  function saveData() {
+      contactInfo.push(data);
+      localStorage.setItem("USERS", JSON.stringify(contactInfo));
+    }
+
     const initialState = {
         username: "",
         email: "",
@@ -27,6 +46,7 @@ const UserForm = () => {
     if ( data.username.length < 3 ) {
       setMessage("Name must be at least 3 characters");
       setBtnDisabled(true);
+
     } else {
       setMessage(null);
       setBtnDisabled(false);
@@ -40,11 +60,13 @@ const UserForm = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log("se lanza el formulario", data);
+    saveData()
+
     clearState();
     setMessage("formulario enviado con éxito");
     setTimeout(() => {
       navigate("/");
-    }, 3000);
+    }, 4000);
   };
   return (
     <form onSubmit={handleSubmit}>
