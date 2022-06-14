@@ -74,12 +74,10 @@ const UserForm = () => {
         value={data.email}
         name="email"
       />
-       <input
-        type="textarea"
+       <textarea name="text" cols='30' rows='10'
         placeholder="pon aquí tu texto"
         onChange={handleInputChange}
         value={data.text}
-        name="text"
       />
       <button type="submit" disabled={btnDisabled}>
         Enviar
