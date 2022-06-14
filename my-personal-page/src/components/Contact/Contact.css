@@ -1,0 +1,20 @@
+.contact {
+    display: flex;
+    flex-direction: column;
+    padding-right: 3em;
+    padding-left: 1.5em;
+}
+
+.btncontact {
+    all: unset;
+    background-color: rgb(224, 155, 155);
+    border-radius: 30px;
+    text-align: center;
+    font-weight: bolder;
+    font-style: italic;
+    text-align: center;
+    font-size: 1.2em;
+    padding: 20px;
+    margin: 30px 0px;
+    border: 2px dotted black;
+}

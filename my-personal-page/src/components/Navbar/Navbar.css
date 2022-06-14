@@ -1,0 +1,24 @@
+.navbar {
+    display: flex;
+    flex-direction: column;
+    padding-right: 3em;
+    padding-left: 1.5em;
+}
+
+.btnav {
+    all: unset;
+    background-color: rgb(224, 155, 155);
+    border-radius: 30px;
+    text-align: center;
+    font-weight: bolder;
+    font-style: italic;
+    padding: 8px;
+    margin: 6px 0px;
+}
+
+.title {
+    font-size: 1.6em;
+    font-weight: bolder;
+    color: rgb(90, 14, 14);
+    margin-bottom: 1em;
+}
