@@ -1,23 +1,15 @@
 import './Contact.css'
+import { Link } from "react-router-dom";
 
 
-// import React from 'react';
-
-// class Navbar extends React.Component {
-//     render() {
-//     return this.props.title
-//     }
-//     }
-
-
-const Navbar=({array})=>{
+const Contact=({array})=>{
     const listContact=array.map((element,indice)=><button className="btncontact" key={indice}>{element}</button>)
     return (
     <div className="contact">
         {listContact}
-        
+        <Link to="/contact">Contact</Link>
         </div>
     )
 }
 
-export default Navbar;
+export default Contact;
